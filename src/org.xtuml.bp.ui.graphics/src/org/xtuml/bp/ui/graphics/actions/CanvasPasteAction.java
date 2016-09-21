@@ -103,7 +103,7 @@ public class CanvasPasteAction extends PasteAction {
 		// if the destination is the diagram
 		if (getDestinations().size() == 1
 				&& getDestinations().get(0) == m_editor.getModel()
-						.getRepresents() && !MOVE_IS_IN_PROGRESS) {
+						.getRepresents() && !moveIsInProgress()) {
 			NonRootModelElement[] elements = getLoadedGraphicalInstances((NonRootModelElement) m_editor
 					.getModel().getRepresents());
 			graphicElements = getPastedGraphicalElements((NonRootModelElement) m_editor
@@ -145,16 +145,11 @@ public class CanvasPasteAction extends PasteAction {
 		if (destGD_MD == null) {
 			return;
 		}
-		if (MOVE_IS_IN_PROGRESS) {
-			NonRootModelElement[] selectedElements = new NonRootModelElement[ELEMENT_MOVE_SOURCE_SELECTION.size()];
-			selectedElements = ELEMENT_MOVE_SOURCE_SELECTION.toArray(selectedElements);
-
-			// updateGraphicalElementRoots(selectedElements,
-			// destModel.getModelRoot());
+		if (moveIsInProgress()) {
 
 			for (NonRootModelElement nrme : ELEMENT_MOVE_SOURCE_SELECTION) {
 				GraphicalElement_c movedGraphicalElement = null;
-				Ooaofgraphics ooaofg = Ooaofgraphics.getInstance(nrme.getModelRoot().getId());
+				Ooaofgraphics ooaofg = Ooaofgraphics.getInstance(PasteAction.getContainerForMove(nrme).getModelRoot().getId());
 				movedGraphicalElement = CanvasPlugin.getGraphicalElement(ooaofg, nrme);
 
 				// If there is a graphical element we need to update its
