@@ -78,6 +78,11 @@
   m_fh.print( "'"); //$$NON-NLS-1$$
       .if ( (((multilevel) AND (not stream)) AND (col.Name == "Action_Semantics_internal")) )
         .// exclude action semantics
+  IPreferenceStore store = org.xtuml.bp.core.CorePlugin.getDefault().getPreferenceStore();
+  String persistActivities = store.getString(BridgePointPreferencesStore.ACTIVITY_PERSISTENCE);
+  if ( persistActivities.equals(BridgePointPreferencesStore.NO_PERSIST_ACTIVITY_FILES) ) {
+      m_fh.print( inst.${a.body}().replaceAll( "'", "''" ) ); //$$NON-NLS-1$$ //$$NON-NLS-2$$
+  }
       .else
   m_fh.print( inst.${a.body}().replaceAll( "'", "''" ) ); //$$NON-NLS-1$$ //$$NON-NLS-2$$
       .end if
@@ -774,7 +779,7 @@ throws IOException
             .else
               .assign relNumbAndPhrase = "R${child.Numb}"
               .if(child.rel_phrase != "")
-                .assign relNumbAndPhrase = relNumbAndPhrase + ".'${child.rel_phrase}'"
+                .assign relNumbAndPhrase = relNumbAndPhrase + ".'$cr{child.rel_phrase}'"
               .end if
               .invoke nav = generate_backward_rel_chain_nav_from_kl(table.Key_Lett, "->${table.Key_Lett}[${relNumbAndPhrase}]", child.Card, "inst", variableName, false);
               .assign nav_string = nav.body
@@ -1050,6 +1055,10 @@ ${sql.body}\
 void write_${r.body}_actions(${r.body} inst)
 throws IOException
 {
+IPreferenceStore store = org.xtuml.bp.core.CorePlugin.getDefault().getPreferenceStore();
+String persistActivities = store.getString(BridgePointPreferencesStore.ACTIVITY_PERSISTENCE);
+if ( persistActivities.equals(BridgePointPreferencesStore.PERSIST_ACTIVITY_FILES) ) {
+
 if(inst != null && !inst.isProxy()){
   m_afh.print( "{{" ); //$$NON-NLS-1$$
   m_afh.print( inst.getName() ); //$$NON-NLS-1$$
@@ -1069,6 +1078,7 @@ if(inst != null && !inst.isProxy()){
     m_updateActions = true;
   }
   m_afh.print( "\n" ); //$$NON-NLS-1$$
+}
 }
 }
   .end for
