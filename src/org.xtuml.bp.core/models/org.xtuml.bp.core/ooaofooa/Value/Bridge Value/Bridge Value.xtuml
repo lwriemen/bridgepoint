@@ -148,76 +148,69 @@ else
   
   select one sys related by ee->PE_PE[R8001]->EP_PKG[R8000]->S_SYS[R1405];
 
-  // set the value in the user-defined order
-  select any orderedParm related by brg->S_BPARM[R21]
-                     where (selected.Previous_BParm_ID == GD::NULL_UNIQUE_ID());
-  while(not_empty orderedParm)
-    for each arg in args
-      if (orderedParm.Name == arg.Name)
-        select one cval related by arg->V_VAL[R800];
-        select one ctype related by orderedParm->S_DT[R22];
-        select any result related by top_stack_frame->I_VSF[R2951] where
-                                             selected.Value_ID == cval.Value_ID;
-        select one rtVal related by result->RV_RVL[R3305];
-        isByRef = false;
-        if (orderedParm.By_Ref == 1)
-          isByRef = true;
-          // TODO By Reference arguments probably don''t work, this is a hack
-          newValue = GD::convertToBPDataType(type: ctype.Name, value:
-                                                                 rtVal.getValue());
-          cval.setValue(stack_frame_id: top_stack_frame.Stack_Frame_ID,
-                               value: newValue, member_id:GD::NULL_UNIQUE_ID());
-        end if;
-
-        VM::addArgumentValue(value:rtVal.getValue(), type:ctype.Name, byRef: isByRef);
-      end if;
-    end for;
-    select one orderedParm related by orderedParm->S_BPARM[R55.''precedes''];
-  end while;
-
   // Look for a user''s class that matches the EE name
 
   VM::setUserClassPath(System_ID:sys.Sys_ID);
   success = VM::loadClass(system_id:sys.Sys_ID, name:ee.Key_Lett);
   if (success)
+    // set the value in the user-defined order
+    select any orderedParm related by brg->S_BPARM[R21]
+                       where (selected.Previous_BParm_ID == GD::NULL_UNIQUE_ID());
+    while(not_empty orderedParm)
+      for each arg in args
+        if (orderedParm.Name == arg.Name)
+          select one cval related by arg->V_VAL[R800];
+          select one ctype related by orderedParm->S_DT[R22];
+          select any result related by top_stack_frame->I_VSF[R2951] where
+                                               selected.Value_ID == cval.Value_ID;
+          select one rtVal related by result->RV_RVL[R3305];
+          isByRef = false;
+          if (orderedParm.By_Ref == 1)
+            isByRef = true;
+            // TODO By Reference arguments probably don''t work, this is a hack
+            newValue = GD::convertToBPDataType(type: ctype.Name, value:
+                                                                   rtVal.getValue());
+            cval.setValue(stack_frame_id: top_stack_frame.Stack_Frame_ID,
+                                 value: newValue, member_id:GD::NULL_UNIQUE_ID());
+          end if;
+  
+          VM::addArgumentValue(value:rtVal.getValue(), type:ctype.Name, byRef: isByRef);
+        end if;
+      end for;
+      select one orderedParm related by orderedParm->S_BPARM[R55.''precedes''];
+    end while;
+
     // Execute a method matching the bridge
     success = VM::execute(stack_frame_id:param.stack_frame_id, name: brg.Name);
-    if (success)    
-      // Now convert any by ref parameters back to the original data type
-      for each parm in parms
-        for each arg in args
-          if (parm.By_Ref == 1 and parm.Name == arg.Name)
-            select one cval related by arg->V_VAL[R800];
-            select one ctype related by parm->S_DT[R22];
-
-            select any result related by top_stack_frame->I_VSF[R2951] where
-                                             selected.Value_ID == cval.Value_ID;
-            select one rtVal related by result->RV_RVL[R3305];
-            select one udt related by ctype->S_UDT[R17]; // is it core?
-            if (not_empty udt)// if not, check user data type
-              pe_id = udt.getCoreType();
-              select any dt_pe from instances of PE_PE
-                                           where (selected.Element_ID == pe_id);
-              select one ctype related by dt_pe->S_DT[R8001];
-            end if;
-            newValue = GD::convertFromBPDataType(type: ctype.Name, value:
-                                                              rtVal.getValue());
-            cval.setValue(stack_frame_id: top_stack_frame.Stack_Frame_ID,
-                               value: newValue, member_id:GD::NULL_UNIQUE_ID());
-          end if;
-        end for;
-      end for;   
-      // Return the result
-      create object instance callRtVal of RV_RVL;
-      callRtVal.createSimpleValue();
-      relate callRtVal to callResult across R3305;
-      callRtVal.setValue(value:VM::getResult());
-      // remove all intermediate values from the stack
+    // Now convert any by ref parameters back to the original data type
+    for each parm in parms
       for each arg in args
-        top_stack_frame.popValue(value_id:arg.Value_ID);
+        if (parm.By_Ref == 1 and parm.Name == arg.Name)
+          select one cval related by arg->V_VAL[R800];
+          select one ctype related by parm->S_DT[R22];
+
+          select any result related by top_stack_frame->I_VSF[R2951] where
+                                           selected.Value_ID == cval.Value_ID;
+          select one rtVal related by result->RV_RVL[R3305];
+          select one udt related by ctype->S_UDT[R17]; // is it core?
+          if (not_empty udt)// if not, check user data type
+            pe_id = udt.getCoreType();
+            select any dt_pe from instances of PE_PE
+                                         where (selected.Element_ID == pe_id);
+            select one ctype related by dt_pe->S_DT[R8001];
+          end if;
+          newValue = GD::convertFromBPDataType(type: ctype.Name, value:
+                                                            rtVal.getValue());
+          cval.setValue(stack_frame_id: top_stack_frame.Stack_Frame_ID,
+                             value: newValue, member_id:GD::NULL_UNIQUE_ID());
+        end if;
       end for;
-      return;
-    end if;
+    end for;   
+    // Return the result
+    create object instance callRtVal of RV_RVL;
+    callRtVal.createSimpleValue();
+    relate callRtVal to callResult across R3305;
+    callRtVal.setValue(value:VM::getResult());
   end if;
   for each arg in args
     top_stack_frame.popValue(value_id:arg.Value_ID);
