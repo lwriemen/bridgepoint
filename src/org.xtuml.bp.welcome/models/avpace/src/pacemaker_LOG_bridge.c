@@ -20,7 +20,7 @@
  * Bridge:  LogInteger
  */
 void
-pacemaker_LOG_LogInteger( const i_t p_message )
+pacemaker_LOG_LogInteger( c_t p_message[ESCHER_SYS_MAX_STRING_LEN], const i_t p_i )
 {
   /* Replace/Insert your implementation code here... */
 

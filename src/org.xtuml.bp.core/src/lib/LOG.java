@@ -1,12 +1,4 @@
 //========================================================================
-//
-//File:      $RCSfile$
-//Version:   $Revision$
-//Modified:  $Date$
-//
-//(c) Copyright 2006-2014 by Mentor Graphics Corp. All rights reserved.
-//
-//========================================================================
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not 
 // use this file except in compliance with the License.  You may obtain a copy 
 // of the License at
@@ -30,15 +22,6 @@ import java.util.UUID;
 import org.xtuml.bp.core.CorePlugin;
 
 public class LOG {
-
-	// ========================================================================
-	// Bridge: LogInteger
-	// ========================================================================
-	public static void LogInteger(int ee_message) {
-
-		CorePlugin.out.println("LogInteger:  " + ee_message);
-
-	}
 
 	// ============================================================================
 	// Bridge: LogSuccess
@@ -70,7 +53,7 @@ public class LOG {
 	// ============================================================================
 	// Bridge: LogDate
 	// ============================================================================
-	public static void LogDate(Object ee_d, String ee_message) {
+	public static void LogDate(String ee_message, Object ee_d) {
 		String objString = null;
 				if (ee_d != null) {
 					SimpleDateFormat format = new SimpleDateFormat(
@@ -89,6 +72,15 @@ public class LOG {
 		String objString = (ee_t == null) ? "<null>" : ee_t.toString();
 
 		CorePlugin.out.println("LogTime:  " + objString + " " + ee_message);
+	}
+
+	// ========================================================================
+	// Bridge: LogInteger
+	// ========================================================================
+	public static void LogInteger(String ee_message, int ee_i) {
+
+		CorePlugin.out.println("LogInteger:  " + ee_i + " " + ee_message);
+
 	}
 
 	// ============================================================================

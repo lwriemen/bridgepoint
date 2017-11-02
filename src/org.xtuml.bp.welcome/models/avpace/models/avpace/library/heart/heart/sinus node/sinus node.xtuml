@@ -16,8 +16,8 @@ INSERT INTO O_TFR
 	1,
 	'// Now log the periods, decrement them and continue.
 LOG::LogInfo( message:"systolic period, diastolic period" );
-LOG::LogInteger( message:self.systolic_period );
-LOG::LogInteger( message:self.diastolic_period );
+LOG::LogInteger( message:"", i:self.systolic_period );
+LOG::LogInteger( message:"", i:self.diastolic_period );
 if ( self.decrement < self.systolic_period )
   self.systolic_period = self.systolic_period - self.decrement;
 end if;

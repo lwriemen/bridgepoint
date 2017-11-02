@@ -17,7 +17,7 @@ extern	"C"	{
 
 #include "avpace_sys_types.h"
 
-void pacemaker_LOG_LogInteger( const i_t );
+void pacemaker_LOG_LogInteger( c_t[ESCHER_SYS_MAX_STRING_LEN], const i_t );
 void pacemaker_LOG_LogReal( c_t[ESCHER_SYS_MAX_STRING_LEN], const r_t );
 void pacemaker_LOG_LogTime( c_t[ESCHER_SYS_MAX_STRING_LEN], Escher_TimeStamp_t );
 void pacemaker_LOG_LogDate( Escher_Date_t, c_t[ESCHER_SYS_MAX_STRING_LEN] );

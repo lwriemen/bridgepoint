@@ -80,7 +80,7 @@ heart_LOG_LogReal( c_t p_message[ESCHER_SYS_MAX_STRING_LEN], const r_t p_r )
  * Bridge:  LogInteger
  */
 void
-heart_LOG_LogInteger( const i_t p_message )
+heart_LOG_LogInteger( c_t p_message[ESCHER_SYS_MAX_STRING_LEN], const i_t p_i )
 {
   /* Replace/Insert your implementation code here... */
 

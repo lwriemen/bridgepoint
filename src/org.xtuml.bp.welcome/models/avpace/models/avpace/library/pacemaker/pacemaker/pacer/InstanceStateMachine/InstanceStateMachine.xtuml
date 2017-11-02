@@ -439,7 +439,7 @@ self.timeout_timer = TIM::timer_start(microseconds:self.systolic_timeout,
 
 self.cycle_count = self.cycle_count + 1;
 LOG::LogInfo( message:"cycle count" );
-LOG::LogInteger( message:self.cycle_count );
+LOG::LogInteger( message:"", i:self.cycle_count );
 ',
 	'');
 INSERT INTO SM_MOAH

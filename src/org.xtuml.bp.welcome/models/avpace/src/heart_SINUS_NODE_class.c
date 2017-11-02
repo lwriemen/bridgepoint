@@ -21,11 +21,11 @@ heart_SINUS_NODE_op_log_and_adjust( heart_SINUS_NODE * self)
   /* LOG::LogInfo( message:systolic period, diastolic period ) */
   XTUML_OAL_STMT_TRACE( 1, "LOG::LogInfo( message:systolic period, diastolic period )" );
   heart_LOG_LogInfo( "systolic period, diastolic period" );
-  /* LOG::LogInteger( message:self.systolic_period ) */
-  XTUML_OAL_STMT_TRACE( 1, "LOG::LogInteger( message:self.systolic_period )" );
+  /* LOG::LogInteger( message:"", i:self.systolic_period ) */
+  XTUML_OAL_STMT_TRACE( 1, "LOG::LogInteger( message:"", i:self.systolic_period )" );
   heart_LOG_LogInteger( self->systolic_period );
-  /* LOG::LogInteger( message:self.diastolic_period ) */
-  XTUML_OAL_STMT_TRACE( 1, "LOG::LogInteger( message:self.diastolic_period )" );
+  /* LOG::LogInteger( message:"", i:self.diastolic_period ) */
+  XTUML_OAL_STMT_TRACE( 1, "LOG::LogInteger( message:"", i:self.diastolic_period )" );
   heart_LOG_LogInteger( self->diastolic_period );
   /* IF ( ( self.decrement < self.systolic_period ) ) */
   XTUML_OAL_STMT_TRACE( 1, "IF ( ( self.decrement < self.systolic_period ) )" );

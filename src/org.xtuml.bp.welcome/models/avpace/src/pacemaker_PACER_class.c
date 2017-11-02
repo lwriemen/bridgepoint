@@ -65,8 +65,8 @@ pacemaker_PACER_act2( pacemaker_PACER * self, const Escher_xtUMLEvent_t * const 
   /* LOG::LogInfo( message:cycle count ) */
   XTUML_OAL_STMT_TRACE( 1, "LOG::LogInfo( message:cycle count )" );
   pacemaker_LOG_LogInfo( "cycle count" );
-  /* LOG::LogInteger( message:self.cycle_count ) */
-  XTUML_OAL_STMT_TRACE( 1, "LOG::LogInteger( message:self.cycle_count )" );
+  /* LOG::LogInteger( message:"", i:self.cycle_count ) */
+  XTUML_OAL_STMT_TRACE( 1, "LOG::LogInteger( message:"", i:self.cycle_count )" );
   pacemaker_LOG_LogInteger( self->cycle_count );
 }
 
