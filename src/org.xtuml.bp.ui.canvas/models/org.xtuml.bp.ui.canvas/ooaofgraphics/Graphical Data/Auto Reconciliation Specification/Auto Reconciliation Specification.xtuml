@@ -782,7 +782,7 @@ if( CL::isContainedInSystem(element:graphicalElement.represents, system_id:param
         connectorCount = CL::numElements( from:graphicalElement.represents,
                              using:self.Bridge_NumElements);
       end if;
-      CL::traceOperation(message:"Processing GD_GE.diagramId: " + OS::uniqueIdToString(id:graphicalElement.diagramId) + 
+      CL::traceOperation(message:"Processing GD_GE.elementId: " + OS::uniqueIdToString(id:graphicalElement.elementId) + 
      					"\nGD_GE.OOA_TYPE: " + OS::ooaTypeToString(id:graphicalElement.OOA_Type) +
      					"\nGD_GE.representsPath: " + graphicalElement.represents_path +
      					"\nARS.Bridge_NumElements: " + self.Bridge_NumElements + " was called on GD_GE.represents.getOOAId()=" + OS::uniqueIdToString(id:CL::getOOAId(from:graphicalElement.represents)) +
@@ -865,7 +865,7 @@ if( CL::isContainedInSystem(element:graphicalElement.represents, system_id:param
   	    conID = self.findConnector(connectorID:templateConId, system_id:param.system_id, look_outside_system:look_outside_system);
   	    select one model related by graphicalElement->GD_MD[R1];
         if (empty model)
-          msg = " GD_GE.diagramId: " + OS::uniqueIdToString(id:graphicalElement.diagramId) + 
+          msg = " GD_GE.elementId: " + OS::uniqueIdToString(id:graphicalElement.elementId) + 
      					"\nGD_GE.OOA_TYPE: " + OS::ooaTypeToString(id:graphicalElement.OOA_Type) +
      					"\nGD_GE.representsPath: " + graphicalElement.represents_path +
      					"\nARS.Bridge_NumElements: " + self.Bridge_NumElements + " was called on GD_GE.represents.getOOAId()=" + OS::uniqueIdToString(id:CL::getOOAId(from:graphicalElement.represents)) +

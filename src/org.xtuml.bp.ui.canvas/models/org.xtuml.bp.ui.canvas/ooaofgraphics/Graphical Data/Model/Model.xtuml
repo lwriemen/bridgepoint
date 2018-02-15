@@ -1053,7 +1053,8 @@ for each spec in specs
   relate diaEle to graphEle across R302;
   create object instance container of GD_CTR;
   relate elem to shape across R2;
-  relate elem to self across R1;
+  create object instance elemOnCanvas of GD_EOC;
+  relate elem to self across R1 using elemOnCanvas;
   relate spec to elem across R10;  
   relate container to shape across R28;
   
@@ -1132,7 +1133,8 @@ if(empty startEle and empty endEle)
   reprocess = true; 
 end if;
 create object instance newConElem of GD_GE;
-relate newConElem to canvas across R1;
+create object instance elemOnCanvas of GD_EOC;
+relate newConElem to canvas across R1 using elemOnCanvas;
 create object instance connector of GD_CON;
 relate newConElem to connector across R2;
 create object instance graphEdge of DIM_ED;
@@ -1306,7 +1308,8 @@ if (sourceSpec == targetSpec)
 else
   relate newConElem to targetSpec across R10;
 end if;
-relate newConElem to self across R1;
+create object instance elemOnCanvas of GD_EOC;
+relate newConElem to self across R1 using elemOnCanvas;
 create object instance connector of GD_CON;
 relate newConElem to connector across R2;
 create object instance graphEdge of DIM_ED;
@@ -1471,7 +1474,8 @@ INSERT INTO O_TFR
 	'select many elems related by self->GD_GE[R1];
 for each elem in elems
   if elem.represents == param.elem
-    unrelate self from elem across R1;
+    select one elemOnCanvas related by elem->GD_EOC[R1];
+    unrelate self from elem across R1 using elemOnCanvas;
     create object instance eis of GD_EIS;
     relate self to elem across R32 using eis;
     break;
@@ -1503,7 +1507,8 @@ for each elem in elems
     select one eis related by elem->GD_EIS[R32];
     unrelate self from elem across R32 using eis;
     delete object instance eis;
-    relate self to elem across R1; 
+    create object instance elemOnCanvas of GD_EOC;
+    relate self to elem across R1 using elemOnCanvas; 
     break;
   end if;
 end for;',
@@ -1707,7 +1712,8 @@ end for;
    end if;
   
   relate elem to shape across R2;
-  relate elem to self across R1;
+  create object instance elemOnCanvas of GD_EOC;
+  relate elem to self across R1 using elemOnCanvas;
   relate reconcileToSpec to elem across R10;
   relate reconcileToSpec to elem across R16;
   
@@ -1774,7 +1780,8 @@ if (not_empty elem_spec)
   end if;
 
   relate elem to shape across R2;
-  relate elem to self across R1;
+  create object instance elemOnCanvas of GD_EOC;
+  relate elem to self across R1 using elemOnCanvas;
   relate elem_spec to elem across R10;
   relate elem_spec to elem across R16;
   
@@ -1855,7 +1862,8 @@ if(not_empty elemSpec)
   select any endElement related by self->GD_GE[R1] where (selected.elementId == param.endId);
   create object instance conElem of GD_GE;
   relate conElem to elemSpec across R10;
-  relate conElem to self across R1;
+  create object instance elemOnCanvas of GD_EOC;
+  relate conElem to self across R1 using elemOnCanvas;
   create object instance connector of GD_CON;
   relate conElem to connector across R2;
   create object instance graphEdge of DIM_ED;

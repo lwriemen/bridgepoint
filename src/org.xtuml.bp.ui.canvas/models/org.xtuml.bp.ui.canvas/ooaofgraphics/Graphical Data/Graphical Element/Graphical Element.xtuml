@@ -599,7 +599,8 @@ for each tsp in tsp_set
 end for;
 
 select one model related by self->GD_MD[R1];
-unrelate self from model across R1;
+select one elemOnCanvas related by self->GD_EOC[R1];
+unrelate self from model across R1 using elemOnCanvas;
 
 select many styles related by self->STY_S[R401];
 for each style in styles
@@ -761,7 +762,7 @@ INSERT INTO O_BATTR
 INSERT INTO O_ATTR
 	VALUES ("81e34c0a-4504-4774-b4d9-a17d0fc4e930",
 	"9d561ba9-b78b-4769-9ab2-c793c6b1b46c",
-	"f4d763db-22a8-4b48-8543-ae9db6ca07d2",
+	"ee285046-698d-47d4-8d30-506164f3e21f",
 	'OOA_ID',
 	'Description: The identifier of the OOA model element that this graphical element  is graphical information for.   Note that there may be multiple graphical elements needed to capture all the graphical data for one OOA model element.  E.g., relationships.
 Full Name: OOA Identifier
@@ -889,57 +890,6 @@ INSERT INTO O_ATTR
 	'',
 	'',
 	'eleId',
-	0,
-	"ba5eda7a-def5-0000-0000-000000000007",
-	'',
-	'');
-INSERT INTO O_REF
-	VALUES ("9d561ba9-b78b-4769-9ab2-c793c6b1b46c",
-	"09423687-e999-4aba-876d-35e0d3331311",
-	0,
-	"d1783817-101b-46d1-b9a8-907ee4d5efe4",
-	"327146e2-7673-4515-97f3-c34af8c671c5",
-	"06947059-7da9-4759-b912-90dd18cc836a",
-	"38059324-2b5e-45f9-b1ca-f80876e19fc3",
-	"f4d763db-22a8-4b48-8543-ae9db6ca07d2",
-	"4afd753c-b7d6-4050-9896-1df26d4b0eb4",
-	"00000000-0000-0000-0000-000000000000",
-	0,
-	'',
-	'Model',
-	'diagramId',
-	'R1.''is part of''');
-INSERT INTO R_RGO_PROXY
-	VALUES ("9d561ba9-b78b-4769-9ab2-c793c6b1b46c",
-	"327146e2-7673-4515-97f3-c34af8c671c5",
-	"06947059-7da9-4759-b912-90dd18cc836a",
-	'../Graphical Data.xtuml');
-INSERT INTO O_RTIDA_PROXY
-	VALUES ("d1783817-101b-46d1-b9a8-907ee4d5efe4",
-	"09423687-e999-4aba-876d-35e0d3331311",
-	0,
-	"327146e2-7673-4515-97f3-c34af8c671c5",
-	"38059324-2b5e-45f9-b1ca-f80876e19fc3",
-	'../Graphical Data.xtuml');
-INSERT INTO O_RATTR
-	VALUES ("f4d763db-22a8-4b48-8543-ae9db6ca07d2",
-	"9d561ba9-b78b-4769-9ab2-c793c6b1b46c",
-	"57f2fb06-0e5a-471e-bab1-02b88f324eb4",
-	"18112b9b-f650-403f-be5c-27e3bda6b9dd",
-	1,
-	'diagramId');
-INSERT INTO O_BATTR_PROXY
-	VALUES ("57f2fb06-0e5a-471e-bab1-02b88f324eb4",
-	"18112b9b-f650-403f-be5c-27e3bda6b9dd",
-	'../../UML 2.0 Diagram Interchange/Diagram/Diagram.xtuml');
-INSERT INTO O_ATTR
-	VALUES ("f4d763db-22a8-4b48-8543-ae9db6ca07d2",
-	"9d561ba9-b78b-4769-9ab2-c793c6b1b46c",
-	"ee285046-698d-47d4-8d30-506164f3e21f",
-	'diagramId',
-	'',
-	'',
-	'diagramId',
 	0,
 	"ba5eda7a-def5-0000-0000-000000000007",
 	'',

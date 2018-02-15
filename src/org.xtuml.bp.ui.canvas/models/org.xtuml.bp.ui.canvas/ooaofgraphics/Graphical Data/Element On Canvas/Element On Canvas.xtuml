@@ -1,0 +1,142 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("03f3dd39-fdc1-4b4f-a4c3-b5783cd4d2d9",
+	'Element On Canvas',
+	23,
+	'GD_EOC',
+	'An element instance added to the model.',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_REF
+	VALUES ("03f3dd39-fdc1-4b4f-a4c3-b5783cd4d2d9",
+	"09423687-e999-4aba-876d-35e0d3331311",
+	0,
+	"d1783817-101b-46d1-b9a8-907ee4d5efe4",
+	"327146e2-7673-4515-97f3-c34af8c671c5",
+	"9b9ea1c8-a516-4c22-8aff-791ebaa51997",
+	"38059324-2b5e-45f9-b1ca-f80876e19fc3",
+	"7adcec56-ff56-43c5-b917-9b4bf4b44ee1",
+	"5c782404-150d-4b74-aaca-fd7b17fc5ec3",
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'Model',
+	'diagramId',
+	'R1.''is part of''');
+INSERT INTO R_RGO_PROXY
+	VALUES ("03f3dd39-fdc1-4b4f-a4c3-b5783cd4d2d9",
+	"327146e2-7673-4515-97f3-c34af8c671c5",
+	"9b9ea1c8-a516-4c22-8aff-791ebaa51997",
+	'../Graphical Data.xtuml');
+INSERT INTO O_RTIDA_PROXY
+	VALUES ("d1783817-101b-46d1-b9a8-907ee4d5efe4",
+	"09423687-e999-4aba-876d-35e0d3331311",
+	0,
+	"327146e2-7673-4515-97f3-c34af8c671c5",
+	"38059324-2b5e-45f9-b1ca-f80876e19fc3",
+	'../Graphical Data.xtuml');
+INSERT INTO O_RATTR
+	VALUES ("7adcec56-ff56-43c5-b917-9b4bf4b44ee1",
+	"03f3dd39-fdc1-4b4f-a4c3-b5783cd4d2d9",
+	"57f2fb06-0e5a-471e-bab1-02b88f324eb4",
+	"18112b9b-f650-403f-be5c-27e3bda6b9dd",
+	1,
+	'diagramId');
+INSERT INTO O_BATTR_PROXY
+	VALUES ("57f2fb06-0e5a-471e-bab1-02b88f324eb4",
+	"18112b9b-f650-403f-be5c-27e3bda6b9dd",
+	'../../UML 2.0 Diagram Interchange/Diagram/Diagram.xtuml');
+INSERT INTO O_ATTR
+	VALUES ("7adcec56-ff56-43c5-b917-9b4bf4b44ee1",
+	"03f3dd39-fdc1-4b4f-a4c3-b5783cd4d2d9",
+	"00000000-0000-0000-0000-000000000000",
+	'diagramId',
+	'',
+	'',
+	'diagramId',
+	1,
+	"ba5eda7a-def5-0000-0000-000000000007",
+	'',
+	'');
+INSERT INTO O_REF
+	VALUES ("03f3dd39-fdc1-4b4f-a4c3-b5783cd4d2d9",
+	"9d561ba9-b78b-4769-9ab2-c793c6b1b46c",
+	0,
+	"ee285046-698d-47d4-8d30-506164f3e21f",
+	"327146e2-7673-4515-97f3-c34af8c671c5",
+	"9b9ea1c8-a516-4c22-8aff-791ebaa51997",
+	"06947059-7da9-4759-b912-90dd18cc836a",
+	"65a39ad4-229d-4a87-abe6-959124a86d8a",
+	"d7d2128f-f3ac-4c67-9a9f-3b93a20fb6aa",
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'Graphical Element',
+	'elementId',
+	'R1.''contains''');
+INSERT INTO O_RTIDA_PROXY
+	VALUES ("ee285046-698d-47d4-8d30-506164f3e21f",
+	"9d561ba9-b78b-4769-9ab2-c793c6b1b46c",
+	0,
+	"327146e2-7673-4515-97f3-c34af8c671c5",
+	"06947059-7da9-4759-b912-90dd18cc836a",
+	'../Graphical Data.xtuml');
+INSERT INTO O_RATTR
+	VALUES ("65a39ad4-229d-4a87-abe6-959124a86d8a",
+	"03f3dd39-fdc1-4b4f-a4c3-b5783cd4d2d9",
+	"53d10295-c89f-4194-94ba-3dab00d071cd",
+	"593e6c1e-5bc8-40f5-b079-a85690d47f08",
+	1,
+	'elementId');
+INSERT INTO O_BATTR_PROXY
+	VALUES ("53d10295-c89f-4194-94ba-3dab00d071cd",
+	"593e6c1e-5bc8-40f5-b079-a85690d47f08",
+	'../../UML 2.0 Diagram Interchange/DiagramElement/DiagramElement.xtuml');
+INSERT INTO O_ATTR
+	VALUES ("65a39ad4-229d-4a87-abe6-959124a86d8a",
+	"03f3dd39-fdc1-4b4f-a4c3-b5783cd4d2d9",
+	"7adcec56-ff56-43c5-b917-9b4bf4b44ee1",
+	'elementId',
+	'',
+	'',
+	'elementId',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000007",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"03f3dd39-fdc1-4b4f-a4c3-b5783cd4d2d9");
+INSERT INTO O_OIDA
+	VALUES ("7adcec56-ff56-43c5-b917-9b4bf4b44ee1",
+	"03f3dd39-fdc1-4b4f-a4c3-b5783cd4d2d9",
+	0,
+	'diagramId');
+INSERT INTO O_OIDA
+	VALUES ("65a39ad4-229d-4a87-abe6-959124a86d8a",
+	"03f3dd39-fdc1-4b4f-a4c3-b5783cd4d2d9",
+	0,
+	'elementId');
+INSERT INTO O_ID
+	VALUES (1,
+	"03f3dd39-fdc1-4b4f-a4c3-b5783cd4d2d9");
+INSERT INTO O_ID
+	VALUES (2,
+	"03f3dd39-fdc1-4b4f-a4c3-b5783cd4d2d9");
+INSERT INTO PE_PE
+	VALUES ("03f3dd39-fdc1-4b4f-a4c3-b5783cd4d2d9",
+	1,
+	"b5695748-80fc-47fb-b5c7-801b5f28b907",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("b5695748-80fc-47fb-b5c7-801b5f28b907",
+	"00000000-0000-0000-0000-000000000000",
+	"8f801c9a-cf2d-4ef4-b11a-51b8697e3ca8",
+	'Graphical Data',
+	'The GD (Graphics Domain) subsystem models the graphical elements for a BridgePoint model.
+-------------------------------------------------------
+Import:org.eclipse.swt.graphics.Color
+Notify_Changes:true',
+	1,
+	'../Graphical Data.xtuml');
