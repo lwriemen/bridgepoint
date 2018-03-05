@@ -1,0 +1,62 @@
+-- BP 7.1.6 content: InstanceStateMachine syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO SM_ISM
+	VALUES ("9a469a99-2641-466c-a58a-1e5a20f7d9e8",
+	"c4ba5946-c238-43f6-9478-43e0a4bce84d");
+INSERT INTO SM_SM
+	VALUES ("9a469a99-2641-466c-a58a-1e5a20f7d9e8",
+	'',
+	0);
+INSERT INTO SM_MOORE
+	VALUES ("9a469a99-2641-466c-a58a-1e5a20f7d9e8");
+INSERT INTO SM_PEVT
+	VALUES ("2f3ad3f9-c216-402a-b5ac-5e320acbd0a6",
+	"9a469a99-2641-466c-a58a-1e5a20f7d9e8",
+	"00000000-0000-0000-0000-000000000000",
+	'Selection Action',
+	'CT_SAT',
+	'complete');
+INSERT INTO SM_EVT
+	VALUES ("2f3ad3f9-c216-402a-b5ac-5e320acbd0a6",
+	"9a469a99-2641-466c-a58a-1e5a20f7d9e8",
+	"00000000-0000-0000-0000-000000000000",
+	1,
+	'complete',
+	0,
+	'',
+	'CT_SAT1',
+	'');
+INSERT INTO GD_MD
+	VALUES ("e7a91804-6d5b-434b-bd9b-6fe308569e6b",
+	8,
+	"9a469a99-2641-466c-a58a-1e5a20f7d9e8",
+	40,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'4.1.17',
+	'org.xtuml.bp.ui.canvas::ooaofgraphics::Canvas Tools::Selection Action::Instance State Machine');
+INSERT INTO DIM_DIA
+	VALUES ("e7a91804-6d5b-434b-bd9b-6fe308569e6b",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_OBJ_PROXY
+	VALUES ("c4ba5946-c238-43f6-9478-43e0a4bce84d",
+	'Selection Action',
+	109,
+	'CT_SAT',
+	'A selection action represents the types of actions that can be performed on a selection set.',
+	"00000000-0000-0000-0000-000000000000",
+	'../Selection Action.xtuml');

@@ -1,0 +1,109 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("59fd46ef-c34b-4066-a4b8-e2c04c95a6dc",
+	'Copy',
+	111,
+	'CT_CPY',
+	'Creates a copy of the selected elements which can then be pasted.',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_REF
+	VALUES ("59fd46ef-c34b-4066-a4b8-e2c04c95a6dc",
+	"c4ba5946-c238-43f6-9478-43e0a4bce84d",
+	0,
+	"6cc130b3-d7c9-4765-981b-bb1c8ba39b8f",
+	"043c6760-b815-4831-95f8-adb17708d8cf",
+	"499a1025-3d7e-42e0-9105-9a90df446569",
+	"036a0b70-5194-4970-bed7-7dc1c07f181a",
+	"f0a1c6c7-cf0e-43c2-aa8c-a10a9ce5b741",
+	"e9fe5566-9907-4116-8e2a-411fd764eec0",
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'Selection Action',
+	'id',
+	'R113');
+INSERT INTO R_RGO_PROXY
+	VALUES ("59fd46ef-c34b-4066-a4b8-e2c04c95a6dc",
+	"043c6760-b815-4831-95f8-adb17708d8cf",
+	"499a1025-3d7e-42e0-9105-9a90df446569",
+	'../Canvas Tools.xtuml');
+INSERT INTO O_RTIDA_PROXY
+	VALUES ("6cc130b3-d7c9-4765-981b-bb1c8ba39b8f",
+	"c4ba5946-c238-43f6-9478-43e0a4bce84d",
+	0,
+	"043c6760-b815-4831-95f8-adb17708d8cf",
+	"036a0b70-5194-4970-bed7-7dc1c07f181a",
+	'../Canvas Tools.xtuml');
+INSERT INTO O_RATTR
+	VALUES ("f0a1c6c7-cf0e-43c2-aa8c-a10a9ce5b741",
+	"59fd46ef-c34b-4066-a4b8-e2c04c95a6dc",
+	"6cc130b3-d7c9-4765-981b-bb1c8ba39b8f",
+	"c4ba5946-c238-43f6-9478-43e0a4bce84d",
+	1,
+	'id');
+INSERT INTO O_BATTR_PROXY
+	VALUES ("6cc130b3-d7c9-4765-981b-bb1c8ba39b8f",
+	"c4ba5946-c238-43f6-9478-43e0a4bce84d",
+	'../Selection Action/Selection Action.xtuml');
+INSERT INTO O_ATTR
+	VALUES ("f0a1c6c7-cf0e-43c2-aa8c-a10a9ce5b741",
+	"59fd46ef-c34b-4066-a4b8-e2c04c95a6dc",
+	"00000000-0000-0000-0000-000000000000",
+	'id',
+	'',
+	'',
+	'id',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000007",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("7a8bcca7-f4b3-4a8e-a69a-ef0f94fb91d7",
+	"59fd46ef-c34b-4066-a4b8-e2c04c95a6dc");
+INSERT INTO O_BATTR
+	VALUES ("7a8bcca7-f4b3-4a8e-a69a-ef0f94fb91d7",
+	"59fd46ef-c34b-4066-a4b8-e2c04c95a6dc");
+INSERT INTO O_ATTR
+	VALUES ("7a8bcca7-f4b3-4a8e-a69a-ef0f94fb91d7",
+	"59fd46ef-c34b-4066-a4b8-e2c04c95a6dc",
+	"f0a1c6c7-cf0e-43c2-aa8c-a10a9ce5b741",
+	'current_state',
+	'',
+	'',
+	'current_state',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000006",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"59fd46ef-c34b-4066-a4b8-e2c04c95a6dc");
+INSERT INTO O_OIDA
+	VALUES ("f0a1c6c7-cf0e-43c2-aa8c-a10a9ce5b741",
+	"59fd46ef-c34b-4066-a4b8-e2c04c95a6dc",
+	0,
+	'id');
+INSERT INTO O_ID
+	VALUES (1,
+	"59fd46ef-c34b-4066-a4b8-e2c04c95a6dc");
+INSERT INTO O_ID
+	VALUES (2,
+	"59fd46ef-c34b-4066-a4b8-e2c04c95a6dc");
+INSERT INTO PE_PE
+	VALUES ("59fd46ef-c34b-4066-a4b8-e2c04c95a6dc",
+	1,
+	"afc7af9b-6e70-4780-9ad0-b9f3ec7560c9",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("afc7af9b-6e70-4780-9ad0-b9f3ec7560c9",
+	"00000000-0000-0000-0000-000000000000",
+	"8f801c9a-cf2d-4ef4-b11a-51b8697e3ca8",
+	'Canvas Tools',
+	'// This is used by schema_gen to ignore this subsystem (for publication)
+  TRANSLATE_FOR_EXTERNAL_USE:FALSE
+  Notify_Changes:false
+',
+	100,
+	'../Canvas Tools.xtuml');

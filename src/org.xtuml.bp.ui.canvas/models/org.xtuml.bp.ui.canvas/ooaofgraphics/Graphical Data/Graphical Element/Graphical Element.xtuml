@@ -599,8 +599,8 @@ for each tsp in tsp_set
 end for;
 
 select one model related by self->GD_MD[R1];
-select one elemOnCanvas related by self->GD_EOC[R1];
-unrelate self from model across R1 using elemOnCanvas;
+select one elemOnModel related by self->GD_EOM[R1];
+unrelate self from model across R1 using elemOnModel;
 
 select many styles related by self->STY_S[R401];
 for each style in styles

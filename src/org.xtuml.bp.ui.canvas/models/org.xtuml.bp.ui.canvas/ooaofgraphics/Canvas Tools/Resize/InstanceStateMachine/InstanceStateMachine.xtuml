@@ -1,0 +1,46 @@
+-- BP 7.1.6 content: InstanceStateMachine syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO SM_ISM
+	VALUES ("88f6318f-af88-48b5-80e0-ec68b04e863e",
+	"878e14c8-0767-43f1-b959-62d4ef868f0d");
+INSERT INTO SM_SM
+	VALUES ("88f6318f-af88-48b5-80e0-ec68b04e863e",
+	'',
+	0);
+INSERT INTO SM_MOORE
+	VALUES ("88f6318f-af88-48b5-80e0-ec68b04e863e");
+INSERT INTO GD_MD
+	VALUES ("849d24f3-9da9-4233-9968-568b931ec2f2",
+	8,
+	"88f6318f-af88-48b5-80e0-ec68b04e863e",
+	40,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'',
+	'org.xtuml.bp.ui.canvas::ooaofgraphics::Canvas Tools::Resize::Instance State Machine');
+INSERT INTO DIM_DIA
+	VALUES ("849d24f3-9da9-4233-9968-568b931ec2f2",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_OBJ_PROXY
+	VALUES ("878e14c8-0767-43f1-b959-62d4ef868f0d",
+	'Resize',
+	114,
+	'CT_RSZ',
+	'The act of changing the size of a selected element or group of selected 
+elements.',
+	"00000000-0000-0000-0000-000000000000",
+	'../Resize.xtuml');

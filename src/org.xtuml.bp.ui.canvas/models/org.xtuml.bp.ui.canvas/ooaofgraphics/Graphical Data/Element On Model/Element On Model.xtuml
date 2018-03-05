@@ -2,10 +2,11 @@
 
 INSERT INTO O_OBJ
 	VALUES ("03f3dd39-fdc1-4b4f-a4c3-b5783cd4d2d9",
-	'Element On Canvas',
+	'Element On Model',
 	23,
-	'GD_EOC',
-	'An element instance added to the model.',
+	'GD_EOM',
+	'An element instance added to the model. The instantiation of the relationship 
+allows for direct association with other classes in the graphical domain.',
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO O_REF
 	VALUES ("03f3dd39-fdc1-4b4f-a4c3-b5783cd4d2d9",
@@ -102,6 +103,27 @@ INSERT INTO O_ATTR
 	'elementId',
 	0,
 	"ba5eda7a-def5-0000-0000-000000000007",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("99c47b03-cd20-44de-97d3-7b564633ff64",
+	"03f3dd39-fdc1-4b4f-a4c3-b5783cd4d2d9");
+INSERT INTO O_BATTR
+	VALUES ("99c47b03-cd20-44de-97d3-7b564633ff64",
+	"03f3dd39-fdc1-4b4f-a4c3-b5783cd4d2d9");
+INSERT INTO O_ATTR
+	VALUES ("99c47b03-cd20-44de-97d3-7b564633ff64",
+	"03f3dd39-fdc1-4b4f-a4c3-b5783cd4d2d9",
+	"65a39ad4-229d-4a87-abe6-959124a86d8a",
+	'isVisible',
+	'An element on a model can become invisible when it is considered temporarily 
+removed from all views of the model. The most common example is during a cut 
+operation pending a paste. This also applies to deletion (cut without paste) 
+actions that are retained for possible undo.',
+	'',
+	'isVisible',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000001",
 	'',
 	'');
 INSERT INTO O_ID

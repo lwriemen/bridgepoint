@@ -1,0 +1,45 @@
+-- BP 7.1.6 content: InstanceStateMachine syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO SM_ISM
+	VALUES ("22ca409c-c75b-430e-95bf-c2f39333a6a9",
+	"59fd46ef-c34b-4066-a4b8-e2c04c95a6dc");
+INSERT INTO SM_SM
+	VALUES ("22ca409c-c75b-430e-95bf-c2f39333a6a9",
+	'',
+	0);
+INSERT INTO SM_MOORE
+	VALUES ("22ca409c-c75b-430e-95bf-c2f39333a6a9");
+INSERT INTO GD_MD
+	VALUES ("9746d291-e15c-4850-b321-e0801a512223",
+	8,
+	"22ca409c-c75b-430e-95bf-c2f39333a6a9",
+	40,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'',
+	'org.xtuml.bp.ui.canvas::ooaofgraphics::Canvas Tools::Copy::Instance State Machine');
+INSERT INTO DIM_DIA
+	VALUES ("9746d291-e15c-4850-b321-e0801a512223",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_OBJ_PROXY
+	VALUES ("59fd46ef-c34b-4066-a4b8-e2c04c95a6dc",
+	'Copy',
+	111,
+	'CT_CPY',
+	'Creates a copy of the selected elements which can then be pasted.',
+	"00000000-0000-0000-0000-000000000000",
+	'../Copy.xtuml');

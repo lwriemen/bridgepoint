@@ -7,7 +7,7 @@ export bp_install_dir=/home/lee/devBridgePoint
 
 
 export WORKSPACE=/home/lee/workspace/build
-export INCLUDE_TESTS=false
+export INCLUDE_TESTS=true
 export XTUML_DEVELOPMENT_REPOSITORY=${BP_GIT_DIR}/bridgepoint
 export XTUML_TEST_MODEL_REPOSITORY=${BP_GIT_DIR}/models/test
 export mcj_path=${XTUML_DEVELOPMENT_REPOSITORY}/src/MC-Java

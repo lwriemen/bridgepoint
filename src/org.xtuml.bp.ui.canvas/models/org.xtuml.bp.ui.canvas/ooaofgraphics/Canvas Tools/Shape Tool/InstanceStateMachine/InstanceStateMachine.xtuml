@@ -882,8 +882,8 @@ if (not_empty elem_spec)
   graphNode.width = canvas.SelRectW;
   graphNode.height = canvas.SelRectH;
   relate elem to shape across R2;
-  create object instance elemOnCanvas of GD_EOC;
-  relate elem to canvas across R1 using elemOnCanvas;
+  create object instance elemOnModel of GD_EOM;
+  relate elem to canvas across R1 using elemOnModel;
   relate elem_spec to elem across R10;
   relate elem_spec to elem across R16;
   

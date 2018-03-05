@@ -1,0 +1,47 @@
+-- BP 7.1.6 content: InstanceStateMachine syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO SM_ISM
+	VALUES ("97ab62d4-4b23-44db-a123-7c6c17d66e5b",
+	"5db21aca-7d94-4941-906d-87efcfbff0b2");
+INSERT INTO SM_SM
+	VALUES ("97ab62d4-4b23-44db-a123-7c6c17d66e5b",
+	'',
+	0);
+INSERT INTO SM_MOORE
+	VALUES ("97ab62d4-4b23-44db-a123-7c6c17d66e5b");
+INSERT INTO GD_MD
+	VALUES ("66e4316c-7247-4d3e-9a7f-54a9efc8e7bf",
+	8,
+	"97ab62d4-4b23-44db-a123-7c6c17d66e5b",
+	40,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'',
+	'org.xtuml.bp.ui.canvas::ooaofgraphics::Canvas Tools::Drag::Instance State Machine');
+INSERT INTO DIM_DIA
+	VALUES ("66e4316c-7247-4d3e-9a7f-54a9efc8e7bf",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_OBJ_PROXY
+	VALUES ("5db21aca-7d94-4941-906d-87efcfbff0b2",
+	'Drag',
+	113,
+	'CT_DRG',
+	'The movement of selected elements within or among visible views.
+NOTE: A policy that allows drag from one view to another assumes the drag 
+transforms into a cut or copy with an automatic paste.',
+	"00000000-0000-0000-0000-000000000000",
+	'../Drag.xtuml');

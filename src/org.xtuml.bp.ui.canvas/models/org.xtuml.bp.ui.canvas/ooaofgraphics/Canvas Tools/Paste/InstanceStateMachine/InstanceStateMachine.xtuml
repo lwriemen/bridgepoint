@@ -1,0 +1,46 @@
+-- BP 7.1.6 content: InstanceStateMachine syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO SM_ISM
+	VALUES ("d8f64a7f-d495-4ea7-85a7-642b1abd67ce",
+	"079376c6-c4d3-4257-8110-02d4d1b50c82");
+INSERT INTO SM_SM
+	VALUES ("d8f64a7f-d495-4ea7-85a7-642b1abd67ce",
+	'',
+	0);
+INSERT INTO SM_MOORE
+	VALUES ("d8f64a7f-d495-4ea7-85a7-642b1abd67ce");
+INSERT INTO GD_MD
+	VALUES ("c5b5e6e8-9aae-4f84-9047-9268df52029c",
+	8,
+	"d8f64a7f-d495-4ea7-85a7-642b1abd67ce",
+	40,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'',
+	'org.xtuml.bp.ui.canvas::ooaofgraphics::Canvas Tools::Paste::Instance State Machine');
+INSERT INTO DIM_DIA
+	VALUES ("c5b5e6e8-9aae-4f84-9047-9268df52029c",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_OBJ_PROXY
+	VALUES ("079376c6-c4d3-4257-8110-02d4d1b50c82",
+	'Paste',
+	112,
+	'CT_PST',
+	'Places elements grouped by a cut or copy command onto all visible views at the 
+location specified.',
+	"00000000-0000-0000-0000-000000000000",
+	'../Paste.xtuml');

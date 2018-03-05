@@ -1490,8 +1490,8 @@ INSERT INTO DIM_ND
 	22.000000,
 	"f0a760eb-5414-403f-81ea-09d3488036e2");
 INSERT INTO DIM_GE
-	VALUES (1917.000000,
-	1414.000000,
+	VALUES (1919.000000,
+	1402.000000,
 	"f0a760eb-5414-403f-81ea-09d3488036e2",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -6239,7 +6239,7 @@ INSERT INTO GD_GE
 	"03f3dd39-fdc1-4b4f-a4c3-b5783cd4d2d9",
 	21,
 	0,
-	'org.xtuml.bp.ui.canvas::ooaofgraphics::Graphical Data::Element On Canvas');
+	'org.xtuml.bp.ui.canvas::ooaofgraphics::Graphical Data::Element On Model');
 INSERT INTO GD_SHP
 	VALUES ("6a7f51ef-0de7-47a0-b3fc-203ad9d916f6");
 INSERT INTO GD_NCS
@@ -6268,7 +6268,7 @@ INSERT INTO GD_GE
 	"327146e2-7673-4515-97f3-c34af8c671c5",
 	34,
 	0,
-	'org.xtuml.bp.ui.canvas::ooaofgraphics::Graphical Data::R1::Element On Canvas');
+	'org.xtuml.bp.ui.canvas::ooaofgraphics::Graphical Data::R1::Element On Model');
 INSERT INTO GD_CON
 	VALUES ("5355d395-588b-46fb-b99e-f24299b5482e",
 	"00000000-0000-0000-0000-000000000000");
@@ -6474,12 +6474,13 @@ INSERT INTO R_OIR
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO O_OBJ_PROXY
 	VALUES ("03f3dd39-fdc1-4b4f-a4c3-b5783cd4d2d9",
-	'Element On Canvas',
+	'Element On Model',
 	23,
-	'GD_EOC',
-	'An element instance added to the model.',
+	'GD_EOM',
+	'An element instance added to the model. The instantiation of the relationship 
+allows for direct association with other classes in the graphical domain.',
 	"00000000-0000-0000-0000-000000000000",
-	'./Element On Canvas/Element On Canvas.xtuml');
+	'./Element On Model/Element On Model.xtuml');
 INSERT INTO PE_PE
 	VALUES ("327146e2-7673-4515-97f3-c34af8c671c5",
 	1,
